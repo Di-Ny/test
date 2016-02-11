@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+    <div class="container">
+
+        <h3>Le concept</h3>
+        <div class="jumbotron">
+            Marre de consulter plusieurs sites météo chaque matin ? Quelle confiance accorder dans les prévisions du jour ? Quel est le meilleur fournisseur chez moi ? 
+            <br />
+            météoZap permet d’agréger les données de plusieurs fournisseurs météo. Les dernières prévisions sont confrontées aux données relevées sur les stations Météo France pour calculer des scores de performance. On peut s’y fier pour estimer la qualité des fournisseurs. Il est possible d’ajouter des points de prévisions, mais il n’est pas possible pour l’heure de calculer les scores sur ces nouveaux points puisqu’il n’y a pas de station Météo France.
+        </div>
+        <br />
+        <div class="jumbotron">
+            J’ai initié le service durant ma période de chômage à Saint-Pierre (Réunion), ville affichée par défaut sur le site. Le service est opérationnel depuis Novembre 2015 et est hébergé sur un serveur personnel aux performances modestes. Il arrive que le serveur plante, ne lui criez pas trop fort dessus, il redémarre tous les soirs à 00h UTC. N’hésitez pas à me faire part de vos remarques : nicolas.dauy@gmail.com
+        </div>
+        <br />
+        <div class="alert alert-success"><strong>Le service est pour l’instant gratuit, sans publicité et sans tracking :)</strong> </div>
+        <br />
+        <br />
+        <p>
+            <span style='font-weight: bold'>Comment sont calculés les scores ? </span><br />
+            Les scores de chaque fournisseur sont calculés par point, avec les données Météo France lorsqu’elles sont disponibles (souvent aux aéroports). Le score affiché est un cumul des scores obtenus les 7 jours passés. Les scores sont attribués au classement : pour chaque paramètre (température, vent, cumul de pluviométrie 3h), le fournisseur le plus proche de la donnée relevée par Météo France obtient un nombre de points plus élevé. En cas d’ex-aequo sur un paramètre, les deux fournisseurs obtiennent le même nombre de points. Plus le score est élevé, plus le fournisseur a reçu des points pour ses prévisions.
+        </p>
+
+
+        <br />
+        <br />
+        <br />
+        <h3>Développement - Changelog</h3>
+        <h4>Développé : </h4>
+        <p>
+            <ul>
+                <li>Base de données</li>
+                <li>Importation des données de prévision : Aeris, Forecast.io, OpenWeatherMap, Wunderground</li>
+                <li>Importation des données de validation : Météo France</li>
+                <li>Affichage des données pour les localités : Saint-Pierre, Saint-Denis, Paris, Bordeaux</li>
+                <li>Calcul et affichage d'un indice de confiance basé sur la disparité des prévisions </li>
+                <li>Calcul de scores basé sur des données de validation pour chaque fournisseur </li>
+                <li>Calcul de scores basé sur des données de validation pour chaque fournisseur </li>
+                <li>Affichage de scores pour chaque fournisseur où des données de validation sont présentes</li>
+                <li>Possibilité d'ajouter une ville</li>
+                <li>Ajout du fournisseur MeteoBlue</li>
+            </ul>
+
+            <h4>A venir :</h4>
+            <ul>
+                <li>Ajout des données MétéoCiel</li>
+                <li>Un outil de vote pour l'utilisateur sur des données provenant de stations personnelles</li>
+                <li>Importation des données de validation : stations METAR</li>
+                <li>Interface utilisateur : proposer de télécharger les données, ajouter les icones du temps sensible, proposer d'afficher toutes les données disponibles</li>
+                <li>Créer des bulletins récapitulatifs par fournisseur</li>
+                <li>Géolocalisation pour centrer la cartographie</li>
+                <li>Tableau blanc : permettre l'écriture simultanée de plusieurs utilisateurs</li>
+                <li>Création du service <strong>velo-ou-pas</strong> : permet d'envoyer un mail pour conseiller l'utilisation du 2 roues, ou pas, pour se rendre au bureau </li>
+            </ul>
+        </p>
+        </html>
